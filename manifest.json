@@ -1,0 +1,35 @@
+{
+    "name": "ComPop",
+    "version": "1.0",
+    "description": "Ayush's communicating popup extension",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/coral16.png",
+            "32": "images/coral32.png",
+            "64": "images/coral64.png",
+            "128": "images/coral128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "options_page": "options.html",
+    "icons": {
+        "16": "images/coral16.png",
+        "32": "images/coral32.png",
+        "64": "images/coral64.png",
+        "128": "images/coral128.png"
+    },
+    "manifest_version": 2
+}
